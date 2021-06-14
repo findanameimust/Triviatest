@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="128dp"
+        android:layout_height="85dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:inputType="textPersonName"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.381"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="384dp"
+        android:layout_height="155dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textName"
+        app:layout_constraintVertical_bias="0.261">
+
+        <TextView
+            android:id="@+id/questiontext"
+            android:layout_width="298dp"
+            android:layout_height="92dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/textview" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/galat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/false_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <Button
+        android:id="@+id/sahi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="84dp"
+        android:text="@string/true_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="98dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sahi"
+        app:srcCompat="@android:drawable/ic_media_next"
+        android:contentDescription="@string/next_value" />
+
+    <ImageButton
+        android:id="@+id/prev"
+        android:layout_width="91dp"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/galat"
+        app:layout_constraintVertical_bias="0.165"
+        app:srcCompat="@android:drawable/ic_media_previous"
+        android:contentDescription="@string/prev_value" />
+
+    <TextView
+        android:id="@+id/counterQuestions"
+        android:layout_width="85dp"
+        android:layout_height="25dp"
+        android:text="@string/counter_questions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        tools:layout_editor_absoluteY="150dp"
+        tools:ignore="MissingConstraints,UnknownId" />
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textName"
+        app:layout_constraintVertical_bias="0.554" />
+
+    <TextView
+        android:id="@+id/highest_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:text="1000"
+        app:layout_constraintBottom_toTopOf="@+id/score_text"
+        app:layout_constraintEnd_toStartOf="@+id/textName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
